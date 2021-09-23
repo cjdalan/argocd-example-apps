@@ -38,16 +38,16 @@ spec:
               port: http
           resources:
           env:
-          - name: SECRET_USERNAME
-            valueFrom:
-              secretKeyRef:
-                name: super-secret
-                key: username
-          - name: SECRET_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: super-secret
-                key: password
+            - name: SECRET_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: super-secret
+                  key: username
+            - name: SECRET_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: super-secret
+                  key: password
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
