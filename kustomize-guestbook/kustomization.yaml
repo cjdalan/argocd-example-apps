@@ -3,6 +3,3 @@ kind: Kustomization
 namePrefix: kustomize-
 generators:
 - guestbook-ui-secret-generator.yaml
-resources:
-- guestbook-ui-deployment.yaml
-- guestbook-ui-svc.yaml
