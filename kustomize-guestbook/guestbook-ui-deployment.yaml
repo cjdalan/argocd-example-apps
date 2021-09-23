@@ -23,4 +23,4 @@ spec:
           valueFrom:
             secretKeyRef:
               name: super-secret
-              key: pass
+              key: password
